@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minicraft - 單人無限遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud">
+            <div id="inventory-btn">背包 (E)</div>
+            <div id="health">❤️ 10/10</div>
+            <div id="position">坐標: 0, 0, 0</div>
+        </div>
+    </div>
+    
+    <div id="inventoryModal" class="modal hidden">
+        <div class="inventory-grid" id="inventoryGrid"></div>
+    </div>
+
+    <script src="js/terrain.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
