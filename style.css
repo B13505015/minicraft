@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+}
+
+#gameContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#gameCanvas {
+    display: block;
+    background: #87CEEB;
+    width: 100%;
+    height: 100%;
+}
+
+#hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    z-index: 10;
+}
+
+#hud div {
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#inventory-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #4CAF50;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#inventory-btn:hover {
+    background: #45a049;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    border: 3px solid #8b7355;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    gap: 10px;
+}
+
+.inventory-slot {
+    width: 60px;
+    height: 60px;
+    background: #8b7355;
+    border: 2px solid #5a4a35;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+.inventory-slot:hover {
+    background: #a08860;
+}
+
+.inventory-slot.filled {
+    background: #6b5a45;
+}
