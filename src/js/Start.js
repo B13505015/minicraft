@@ -117,7 +117,6 @@ class Start {
             "../../desert (1).png",
             "../../terracottahseet.png",
             "../../endstuff.png",
-            "../../lava (3).png",
             "../../lava (4).png",
             "../../smoke.png",
             "../../rainweathe.png",
@@ -393,7 +392,6 @@ class Start {
             "../../tnt_side.png",
             
             // Bed
-            "../../bed.png",
             "../../red_mushroom.png",
             "../../brown_mushroom.png",
             "../../rail.png",

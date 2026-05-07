@@ -78,20 +78,17 @@
   <!-- Fixed chest filename and added furnace front preload for inventory icon -->
   <img src="chest.png.png" alt="chest-spritesheet" />
   <img src="furnace.png.png" alt="furnace-spritesheet" />
-  <img src="bed.png" alt="bed-spritesheet" />
   <img src="magma3sheet.png" alt="magma-spritesheet" />
   <img src="src/resources/gui/icons.png" alt="icons" />
   <img src="projectlogo.png" alt="app-logo" />
   <img src="endstuff.png" alt="end-blocks" />
   <img src="sandstuff.png" alt="sand-blocks" />
   <img src="flame.png" alt="flame-particle" />
-  <img src="lava (3).png" alt="lava-particle" />
   <img src="lava (4).png" alt="lava-block" />
   <img src="smoke.png" alt="smoke-spritesheet" />
   <img src="food2.png" alt="food-icons" />
-  <img src="vine.png" alt="vine-block" />
   <img src="takinginventory.png" alt="recipe-book-icon" />
-  <img src="../../signs.png" alt="signs-spritesheet" />
+  <img src="signs.png" alt="signs-spritesheet" />
   <img src="note_block.png" alt="note-block" />
   <img src="critandnote.png" alt="crit-and-note-particles" />
   <img src="anvil_top.png" alt="anvil-top" />
@@ -213,8 +210,8 @@
     });
   })();
 
-  // PWA Service Worker Registration
-  if ('serviceWorker' in navigator) {
+  // PWA Service Worker Registration (skip on file:// origins)
+  if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('./sw.js', { scope: './' }).then(reg => {
         console.log('SW registered:', reg);

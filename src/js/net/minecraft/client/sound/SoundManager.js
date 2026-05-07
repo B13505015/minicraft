@@ -3,6 +3,8 @@ import * as THREE from "three";
 
 export default class SoundManager {
 
+    static AUDIO_ENABLED = false;
+
     static SOUND_DATA = {
         // Footsteps (Walking Only)
         "step.grass": ["https://files.catbox.moe/om0tev.ogg", "https://files.catbox.moe/meul49.ogg", "https://files.catbox.moe/fjiuid.ogg", "https://files.catbox.moe/tezv1w.ogg", "https://files.catbox.moe/ijmxt1.ogg", "https://files.catbox.moe/yozoe8.ogg"],
@@ -207,6 +209,8 @@ export default class SoundManager {
         this.worldRenderer = worldRenderer;
         this.scene = worldRenderer.scene;
 
+        if (!SoundManager.AUDIO_ENABLED) return;
+
         this.audioListener = new THREE.AudioListener();
         worldRenderer.camera.add(this.audioListener);
 
@@ -244,6 +248,7 @@ export default class SoundManager {
     }
 
     onTick() {
+        if (!SoundManager.AUDIO_ENABLED) return;
         if (!this.isCreated() || !this.worldRenderer?.minecraft) return;
         if (this.worldRenderer.minecraft.isPaused()) return;
 
@@ -331,6 +336,7 @@ export default class SoundManager {
     }
 
     playSound(name, x, y, z, volume, pitch = 1.0) {
+        if (!SoundManager.AUDIO_ENABLED) return null;
         if (!this.isCreated()) return null;
 
         const now = Date.now();
