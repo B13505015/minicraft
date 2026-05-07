@@ -39,9 +39,15 @@ minicraft/
 git clone https://github.com/B13505015/minicraft.git
 ```
 
-2. 打開 `index.html` 在瀏覽器中
+2. 進入專案根目錄並啟動本機伺服器（不要直接用 `file://` 開啟）
+```bash
+cd minicraft
+python -m http.server 8000
+```
 
-3. 開始遊玩！
+3. 在瀏覽器開啟：`http://localhost:8000/index.html`
+
+4. 開始遊玩！
 
 ## 📝 待實現功能
 
